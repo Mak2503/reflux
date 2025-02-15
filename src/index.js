@@ -1,5 +1,4 @@
 // createStore for creating redux store
-
 export function createStore(reducer) {
   // initialization
   let storeState = reducer(undefined, { type: undefined });

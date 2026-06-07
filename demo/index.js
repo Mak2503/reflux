@@ -1,4 +1,5 @@
 import { createStore } from "../src/index.js";
+// import { createStore as  } from "redux";
 
 let lastId = 0;
 function reducer(state = [], action) {
@@ -8,7 +9,7 @@ function reducer(state = [], action) {
       description: action.payload.description,
       resolved: false
     }];
-  } 
+  }
   else if (action.type === 'bugRemoved') {
     return state.filter(bug => bug.id !== action.payload.id)
   }
